@@ -1,22 +1,24 @@
-.. Radio Community Tools Tutorials documentation master file, created by
-   sphinx-quickstart on Thu Apr 10 15:55:33 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to the Radio Community Tools Tutorials
+==============================================
 
-Welcome to Radio Community Tools Tutorials's documentation!
-===========================================================
-
-Contents:
+Getting your environment set up
+-------------------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
 
 
-Indices and tables
-==================
+Using community tools
+---------------------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 1
 
+
+
+How to contribute to tools and tutorials
+----------------------------------------
+
+.. toctree::
+   :maxdepth: 1
