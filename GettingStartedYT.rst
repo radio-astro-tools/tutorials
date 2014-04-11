@@ -18,23 +18,21 @@ this gives a series of instructions for getting the notebook open and it will as
 to connect to your session, it need not be terribly secure (its like a vnc password). The message it prints is 
 shown below:
 
+.. parsed-literal::
 
     The notebook is now live at:
 
         http://127.0.0.1:8888/
 
     Recall you can create a new SSH tunnel dynamically by pressing
-
     ~C and then typing -L8888:localhost:8888
-
     where the first number is the port on your local machine.
-
+    
     If you are using 8888 on your machine already, try -L8889:localhost:8888
 
 
 If you are you are running yt on a remote machine
-
-type ~C to get out of shell
+type Control-C to get out of shell
 
 > -L8888:localhost:8888
 
