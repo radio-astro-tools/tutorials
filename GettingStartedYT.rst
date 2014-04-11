@@ -32,7 +32,7 @@ shown below:
 
 
 If you are you are running yt on a remote machine
-type Control-C to get out of shell
+type ~C to get out of shell
 
 > -L8888:localhost:8888
 
