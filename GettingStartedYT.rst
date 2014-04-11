@@ -1,4 +1,8 @@
-Once YT is installed:
+Getting Started with yt
+=======================
+
+Once YT is installed
+--------------------
 
 (Installation was easy on my RH Linux workstation using instructions at https://github.com/jzuhone/yt_radio_cubes. There were lots of problems with compilers on my OSX 10.7.5 Mac however and we gave up).
 
