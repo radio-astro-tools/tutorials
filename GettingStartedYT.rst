@@ -14,10 +14,9 @@ where the fits data for the examples are)
 
 > yt notebook
 
-this gives a series of instructions for getting the port forwarding
-
-the password is just to connect to your session, need not be secure (its like a vnc password). The message it 
-prints is shown below:
+this gives a series of instructions for getting the notebook open and it will ask for a password -- this is just 
+to connect to your session, it need not be terribly secure (its like a vnc password). The message it prints is 
+shown below:
 
 
     The notebook is now live at:
@@ -33,20 +32,23 @@ prints is shown below:
     If you are using 8888 on your machine already, try -L8889:localhost:8888
 
 
+If you are you are running yt on a remote machine
+
 type ~C to get out of shell
 
 > -L8888:localhost:8888
 
-Then in your browser (chrome or I used firefox which seems ok)
-
-put the address http://127.0.0.1:8888/ -- this starts the iPy notebook after putting in the password you created 
-at the yt notebook step
+Then whether local or remote, put the address http://127.0.0.1:8888/ in your browser -- this starts the iPy 
+notebook after putting in the password you created at the yt notebook step (I'm told chrome works well, I used 
+firefox and it seemed ok)
 
 To get started in the notebook
 
 * click on New notebook button
 
-* import yt (shift enter takes you to next line)
+* import yt (shift-enter runs the command and takes you to next line)
+
+* Write more yt code
 
 To run one of the examples:
 
