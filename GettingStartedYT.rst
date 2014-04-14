@@ -1,3 +1,6 @@
+.. tutorial by Crystal Brogan, with help from Sam Skillman and John ZuHone
+
+
 Getting Started with yt
 =======================
 
