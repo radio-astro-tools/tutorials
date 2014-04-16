@@ -213,12 +213,12 @@ Extra special steps for those using git version 1.7.1
    include a brief message saying what changes you've made in your Git
    repository::
 
-      git commit -m "Added my python script to fit spectral lines and
-      updated README"
+       git commit -m "Added my python script to fit spectral lines and
+       updated README"
+
 
    c. Now you need to push this version of the repository back online::
 
-   
          git push
    
 
