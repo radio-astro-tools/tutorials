@@ -108,8 +108,8 @@ into the main version.
 3. Tell the online GitHub about your edited version of the repository
 
    At this point, if you're using Git version < 1.7.10 there's one more
-   step to make things run properly. Head here
-   :doc:`quick_contribution_oldgit_tutorial_addendum.rst` to check it out.
+   step to make things run properly. Head
+   :doc:`here <quick_contribution_oldgit_tutorial_addendum>` to check it out.
 
    a. At this point on your machine you should have a version of the
    radioscripts_contrib repository that is nearly identical to the one
