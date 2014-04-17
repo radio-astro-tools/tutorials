@@ -9,7 +9,7 @@ of user-created radio astronomy python scripts. This code is offered
 with minimal vetting process and without any guarantee of reliability
 or accuracy. We encourage interested visitors to contribute by adding
 their own useful python routines. The radioscripts_contrib collection
-operates out of a Git Hub repository. Below is a very quick and very
+operates out of a GitHub repository. Below is a very quick and very
 dirty tutorial on how to contribute your own code to the
 repository. This will not make you a Git master, but it will let you
 get the job done. If you're interested in a more in depth look at
@@ -26,12 +26,11 @@ and push your changes back onto your online repository; and finally do
 a pull request to ask moderators to merge the changes in your fork
 into the main version.
 
-
 1. Get Git
 
    If you already know your way around Git you can skip down to step 2.
 
-   a. If you don't already have an account, the first step is to go to
+   a. If you don't already have a GitHub account, the first step is to go to
    https://github.com and set one up.
 
    b. Next you need to make sure Git is installed on your computer. If
@@ -40,7 +39,6 @@ into the main version.
 
       git --version
    
-
    If git is installed you should see a message telling you what
    version you have. Something along these lines::
 
@@ -54,31 +52,23 @@ into the main version.
    https://help.github.com/articles/set-up-git#set-up-git But in the end
    this only requires two simple lines of typing in terminal::
 
-   
       git config --global user.name "Your Name Here"
       git config --global user.email "your_email@example.com"
    
-
    The Git guide also describes how to set up password caching (and
    there's the alternative of using SSH keys instead.) These steps are
    *generally* only useful to save yourself time later from typing in
    a password when intereacting with your online Git repository. Don't
-   worry about that unless you want to. *However,* if you have git
-   version 1.7.1 (as we do in this example,) you need to set up SSH
-   keys.
-
-Extra special steps for those using git version 1.7.1
------------------------------------------------------
-
-   If you have a later version skip down to step 2.  For those of you
-   working with git version 1.7.1, head over to
+   worry about that unless you want to. *However,* if you have an old
+   version of git (this definitely applies to version 1.7.1 and
+   probably any version <1.7.10) there are a few extra steps
+   involved. Head over to
    https://help.github.com/articles/generating-sshkeys and follow
    along with their walkthrough and explanation of setting up an SSH key.
 
-
 2. Set up your personal version of radioscripts_contrib
 
-   a. You need to create a "fork" of the radioscripts_contrib
+   a. You need to create a "fork" (remote copy) of the radioscripts_contrib
    repository to have a personal version you can muck around
    with. From the online Git repository
    (https://github.com/radio-tools/radioscripts_contrib) click the
@@ -86,15 +76,13 @@ Extra special steps for those using git version 1.7.1
 
    .. image:: forkbutton.png
 
-   b. You now need to create a "clone" (copy) of the
+   b. You now need to create a "clone" (local copy) of the
    radioscripts_contrib repository. Navigate to a path in terminal
    where you want to work and type::
-
    
-      git clone https://github.com/your-user-name/radioscripts_contrib.git
-   
+      git clone https://github.com/your-user-name/radioscripts_contrib.git   
 
-   c. This will create a subdirectory named radioscripts_contrib which
+   c. This will create a subdirectory named radioscripts_contrib/ which
    contains the full repository. Within
    radioscripts_contrib/radioscripts_contrib/ scripts are organized
    into subfolders by topic. If there is a subfolder that describes
@@ -105,12 +93,10 @@ Extra special steps for those using git version 1.7.1
    radioscripts_contrib/radioscripts_contrib/ path. We request that
    contributed code be prefaced with a two line license statement at
    the top::
-
    
       # Licensed under a 3-clause BSD style license - see LICENSE.rst
       # Copyright [authorname]
    
-
    We also request that you add a one or two line description of your
    code in the README file in the subdirectory where you place your
    code.
@@ -119,48 +105,11 @@ Extra special steps for those using git version 1.7.1
    of it, there's a file named helloworld.py which you should feel
    free to edit.
 
-
 3. Tell the online GitHub about your edited version of the repository
 
-Extra special steps for those using git version 1.7.1
------------------------------------------------------
-
-   There's one more step of configuration at this point if using Git
-   version 1.7.1. If you have a more recent version skip down to step a. Open
-   the file .git/config in your favorite text editor. It will look
-   something like this::
-
-   
-      [core]
-           repositoryformatversion = 0
-           filemode = true
-           bare = false
-           logallrefupdates = true
-      [remote "origin"]
-           fetch = +refs/heads/*:refs/remotes/origin/*
-           url = https://github.com/brisbind/radioscripts_contrib.git
-      [branch "master"]
-           remote = origin
-           merge = refs/heads/master
-   
-   
-
-   Change the url in the [remote "origin"] section::
-
-   
-      [core]
-           repositoryformatversion = 0
-           filemode = true
-           bare = false
-           logallrefupdates = true
-      [remote "origin"]
-           fetch = +refs/heads/*:refs/remotes/origin/*
-           url = git@github.com:brisbind/radioscripts_contrib.git
-      [branch "master"]
-           remote = origin
-           merge = refs/heads/master
-
-   save and close the file.
+   At this point, if you're using Git version < 1.7.10 there's one more
+   step to make things run properly. Head here
+   :doc:`quick_contribution_oldgit_tutorial_addendum.rst` to check it out.
 
    a. At this point on your machine you should have a version of the
    radioscripts_contrib repository that is nearly identical to the one
@@ -168,11 +117,9 @@ Extra special steps for those using git version 1.7.1
    README file and your new script.)
 
    If you ask Git about your files by typing::
-
    
       git status
    
-
    Git will point out these new and edited files to you. You should
    get some lines of informational text along with the notice that you
    have "Untracked" files. These are the files which are newly updated
@@ -195,17 +142,13 @@ Extra special steps for those using git version 1.7.1
 
    Stage the important files for uploading by typing::
 
-   
       git add your-first-file.name
       git add your-second-file.name
    
-
    Ask git about the status again::
-
    
       git status
    
-
    And you should now see your important files listed under "# Changes
    to be committed"
 
@@ -213,14 +156,11 @@ Extra special steps for those using git version 1.7.1
    include a brief message saying what changes you've made in your Git
    repository::
 
-       git commit -m "Added my python script to fit spectral lines and
-       updated README"
-
+       git commit -m "Added my python script to fit spectral lines and updated README"
 
    c. Now you need to push this version of the repository back online::
 
          git push
-   
 
    d. Almost done, now you just need to request to get your
    contributions merged into the main radioscripts_contrib repository
@@ -240,5 +180,3 @@ Extra special steps for those using git version 1.7.1
    .. image:: pullbutton2.png
 
 You're done!
-
-
