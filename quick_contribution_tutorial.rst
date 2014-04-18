@@ -3,19 +3,29 @@
 I have some code. I just want to add it! How do I do that?
 ==========================================================
 
+Using the command line
+----------------------
+
 `radioscripts_contrib
-<https://github.com/radio-tools/radioscripts_contrib>`_ is a collection
-of user-created radio astronomy python scripts. This code is offered
-with minimal vetting process and without any guarantee of reliability
-or accuracy. We encourage interested visitors to contribute by adding
-their own useful python routines. The radioscripts_contrib collection
-operates out of a GitHub repository. Below is a very quick and very
-dirty tutorial on how to contribute your own code to the
-repository. This will not make you a Git master, but it will let you
-get the job done. If you're interested in a more in depth look at
-coordinating public contributed code in a nice controlled manner you
-may want to check out the Astropy tutorial on contributing code:
+<https://github.com/radio-tools/radioscripts_contrib>`_ is a
+collection of user-created radio astronomy python scripts. This code
+is offered with minimal vetting process and without any guarantee of
+reliability or accuracy. We encourage interested visitors to
+contribute by adding their own useful python routines. The
+radioscripts_contrib collection operates out of a GitHub
+repository. Below is a very quick and very dirty tutorial on how to
+contribute your own code to the repository using the command line Git
+interface --- very convenient for sharing multiple files and editing
+them while simultaneously testing them on your own computer. This will
+not make you a Git master, but it will let you get the job done. If
+you're interested in a more in depth look at coordinating public
+contributed code in a nice controlled manner you may want to check out
+the Astropy tutorial on contributing code:
 http://docs.astropy.org/en/latest/development/workflow/development_workflow.html
+
+If you don't like working with a command line and simply want the
+quickest way to add a single file to the repository, you can check out
+the :doc:`tutorial on contributing code via the GitHub browser interface <quickestwaytoaddcode>`
 
 Briefly, here are the steps we'll be going through (if these don't
 make sense right now, don't worry we've got you covered below!):
@@ -178,5 +188,16 @@ into the main version.
    on that page and your pull request will be processed
 
    .. image:: pullbutton2.png
+
+As long as everything looks good in your code, your pull request will
+be accepted and the code will be merged into the main repository. If
+it turns out there *is* something that needs to be changed, you'll
+receive an email with comments from the moderators asking for
+changes. Once you make those changes in your code on your local
+directory, just add it, stage it, and commit it again::
+
+   git add your-first-file.name
+   git commit -m "Made the changes to the whatsit you requested"
+   git push
 
 You're done!
