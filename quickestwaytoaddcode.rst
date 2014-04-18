@@ -21,11 +21,13 @@ editing as you test them on your own system, you may
 want to check out the other tutorial on contributing code
 :doc:`via command line <quick_contribution_tutorial>`
 
-1. Get Git If you don't already have a GitHub account, the first step
-   is to go to https://github.com and set one up. GitHub also
-   describes how to install a command line interface on your machine
-   to interact with the online repository, but for our purposes all
-   you need is the GitHub account and a web browser.
+1. Get a GitHub account 
+
+   If you don't already have a GitHub account, the first step is to go
+   to https://github.com and set one up. GitHub also describes how to
+   install a command line interface on your machine to interact with
+   the online repository, but for our purposes you don't need to worry
+   about this. All you need is the GitHub account and a web browser.
 
 2. Create your own personal "fork" and add a file to it.
 
