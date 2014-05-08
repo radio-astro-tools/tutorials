@@ -8,7 +8,6 @@ Getting your environment set up
    :maxdepth: 1
 
 
-
 Using community tools
 ---------------------
 
@@ -22,3 +21,7 @@ How to contribute to tools and tutorials
 
 .. toctree::
    :maxdepth: 1
+
+   quickestwaytoaddcode.rst
+   quick_contribution_tutorial.rst
+

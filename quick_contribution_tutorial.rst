@@ -1,10 +1,7 @@
 .. tutorial by Drew Brisbin with help from Adam Ginsburg and Thomas Robitaille
 
-I have some code. I just want to add it! How do I do that?
-==========================================================
-
-Using the command line
-----------------------
+Contributing code with git (intermediate)
+=========================================
 
 `radioscripts_contrib
 <https://github.com/radio-tools/radioscripts_contrib>`_ is a
