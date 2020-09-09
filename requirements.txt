@@ -1,0 +1,5 @@
+numpy
+scipy
+astropy
+spectral_cube
+radio_beam
