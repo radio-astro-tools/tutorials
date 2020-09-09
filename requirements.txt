@@ -6,5 +6,3 @@ aplpy
 git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
 git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
 dask
-zarr
-fsspec
