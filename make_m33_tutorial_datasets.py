@@ -6,11 +6,23 @@ import astropy.units as u
 from spectral_cube import SpectralCube
 from pathlib import Path
 
-outputdir = Path("/home/ekoch/ownCloud/code_development/radio_astro_tools/")
+# When running, change to the location of the data for `workingdir_co` and `workingdir_hi`
+# e.g.,
+# outputdir = Path("/home/ekoch/ownCloud/code_development/radio_astro_tools/")
+# workingdir_co = Path("/home/ekoch/ownCloud/Data/M33/ALMA/")
+# workingdir_hi = Path("/home/ekoch/storage/M33/HI/17B-162/")
 
-workingdir = Path("/home/ekoch/ownCloud/Data/M33/ALMA/")
+# By default, the current directory is used.
 
-cube = SpectralCube.read(workingdir / "Brick1Tile1_12CO21_0p7kms.image.pbcor_K.fits")
+outputdir = Path(".")
+
+workingdir_co = Path(".")
+
+workingdir_hi = Path(".")
+
+# Cut region from the CO(2-1) data cube.
+
+cube = SpectralCube.read(workingdir_co / "Brick1Tile1_12CO21_0p7kms.image.pbcor_K.fits")
 
 y, x = 145, 340
 
@@ -21,8 +33,6 @@ cube_cutout = cube[:, y-size:y+size, x-size:x+size]
 cube_cutout.write(outputdir / "M33_ALMA_ACA_12CO21.cutout.fits", overwrite=True)
 
 # Cutout a similar region from the HI B+C-config cube.
-
-workingdir_hi = Path("/home/ekoch/storage/M33/HI/17B-162/")
 
 hi_cube = SpectralCube.read(workingdir_hi / "M33_14B_17B_HI_contsub_width_1kms.image.pbcor.GBT_feathered.fits", use_dask=True)
 
