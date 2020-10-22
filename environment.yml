@@ -1,4 +1,5 @@
 dependencies:
+  - setuptools_scm
   - numpy
   - scipy
   - matplotlib
