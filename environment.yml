@@ -1,0 +1,13 @@
+dependencies:
+  - numpy
+  - scipy
+  - matplotlib
+  - astropy
+  - aplpy
+  - dask[complete]
+  - pip
+  - pip:
+      - git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
+      - git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
+      - --index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple casatools
+      - --index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple casatasks
