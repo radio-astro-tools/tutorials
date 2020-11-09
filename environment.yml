@@ -1,7 +1,8 @@
 dependencies:
-  - python=3.6
-  - setuptools_scm
-  - pip
-  - pip:
-      - --index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple casatools
-      - --index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple casatasks
+- python=3.6
+- setuptools_scm
+- pip
+- pip:
+  - --index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple
+  - casatools
+  - casatasks
