@@ -1,12 +1,6 @@
 dependencies:
   - python=3.6
   - setuptools_scm
-  - numpy
-  - scipy
-  - matplotlib
-  - astropy
-  - aplpy
-  - dask[complete]
   - pip
   - pip:
       - --index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple casatools
