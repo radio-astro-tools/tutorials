@@ -1,5 +1,6 @@
 dependencies:
 - python=3.6
+- libgfortran
 - setuptools_scm
 - pip
 - pip:
