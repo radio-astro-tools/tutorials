@@ -1,3 +1,4 @@
+--extra-index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple
 numpy
 scipy
 matplotlib
@@ -6,6 +7,5 @@ aplpy
 git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
 git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
 dask[complete]
---extra-index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple
 casatools
---extra-index-url https://casa-pip.nrao.edu/repository/pypi-casa-release/simple casatasks
+casatasks
