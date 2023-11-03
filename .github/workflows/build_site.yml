@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - master
-    paths:
-       - 'spectral_fitting/*.ipynb'
-       - '*.json'
-       - '.github/**'
+    # paths:
+    #    - 'spectral_fitting/*.ipynb'
+    #    - '*.json'
+    #    - '.github/**'
 
 jobs:
   build:
