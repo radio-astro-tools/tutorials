@@ -1,3 +1,9 @@
+# fetch
+requests
+beautifulsoup4
+
+notebook==6.5.2
+
 numpy
 scipy
 matplotlib
