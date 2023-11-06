@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="Radio Tools. A Community for Radio Astronomy Software Development."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.sidr.light.css" />
+
+
+<title>Radio Astro Tools Tutorials</title>
+
+
+<script src="js/analytics.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+	<nav>
+		<div id="mobile-header">
+			<!-- Menu Icon -->
+		    <a id="responsive-menu-button" href="#sidr-main"><div><svg senable-background="new 0 0 24 24" height="24px" id="Layer_1" version="1.1" viewBox="0 0 24 24" width="24px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><g><g><path d="M23.244,17.009H0.75c-0.413,0-0.75,0.36-0.75,0.801v3.421C0,21.654,0.337,22,0.75,22h22.494c0.414,0,0.75-0.346,0.75-0.77    V17.81C23.994,17.369,23.658,17.009,23.244,17.009z M23.244,9.009H0.75C0.337,9.009,0,9.369,0,9.81v3.421    c0,0.424,0.337,0.769,0.75,0.769h22.494c0.414,0,0.75-0.345,0.75-0.769V9.81C23.994,9.369,23.658,9.009,23.244,9.009z     M23.244,1.009H0.75C0.337,1.009,0,1.369,0,1.81V5.23c0,0.423,0.337,0.769,0.75,0.769h22.494c0.414,0,0.75-0.346,0.75-0.769V1.81    C23.994,1.369,23.658,1.009,23.244,1.009z"/></g></g></svg></div></a>
+		    <!-- -->
+		</div>
+		<a href="index.html"><img width=32px src="images/radiosnakes_nostruts2.svg"/></a>
+		<div id="navigation">
+			<ul>
+				<li><a href="https://radio-astro-tools.github.io/about.html">About</a></li>
+                <!--<li><a href="help.html">Get Help</a></li>-->
+				<li><a href="https://radio-astro-tools.github.io/contribute.html">Contribute</a></li>
+                <li><a href="https://github.com/radio-astro-tools/">Organization Home</a>
+                <li><a href="https://radio-astro-tools.github.io/tutorials/">Tutorials</a>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+<div class=main>
+
+    <div id='header1withfig'>
+        <div id='radiosnakes96'>
+            <img alt="Snakes in Space" width='96px' style="vertical-align:middle;margin-right:10px;" src="images/radiosnakes_nostruts2.svg"/>
+        </div>
+        <div id='header1'>
+            Analysis Tutorials using <a href="https://radio-astro-tools.github.io/">radio-astro-tools</a>
+        </div>
+        <!--<div id='radiosnakes96'>
+            <img alt="Snakes on a Fourier Plane" width='96px' style="vertical-align:middle;margin-right:10px;" src="radiosnakes_fft.svg"/>
+        </div>-->
+    </div>
+
+
+    <!-- <object data="radiosnakes.svg" type="image/svg+xml"> </object> -->
+
+
+    <br>
+    <!-- <div class='description' align=left>
+        Tutorials using the radio-astro-tools packages.
+    </div> -->
+
+
+	<section class="featured">
+    <h2> radio-astro-tools Tutorials </h2>
+    <div class=package>
+        <h3> Spectral Cube </h3>
+
+        <img class=left width=200 height=200 src="images/spectralcube.png">
+
+        <span class=description>
+            <a style='font-weight: bold' href="http://spectral-cube.readthedocs.org/en/latest/">Spectral Cube</a>:
+            A toolkit for reading, writing, masking, and otherwise manipulating
+            the spectral cubes that are typical products of radio
+            interferometers and single-dish OTF maps.  It includes a clean interface to
+            <a href="http://yt-project.org">yt</a>, an analysis suite built for simulations
+            with powerful visualization tools.
+        </span>
+    </div>
+    <div class=package>
+        <h3> PV Extractor </h3>
+
+        <img class=left width=200 src="images/pvextractor.png">
+
+        <span class=description>
+            <a style='font-weight: bold' href="http://pvextractor.readthedocs.org/en/latest/">PV Extractor</a>:
+            A toolkit for the extraction of position-velocity diagrams from
+            data cubes.  Includes a matplotlib-based interactive GUI and an
+            interface to the ds9 FITS viewer.
+        </span>
+    </div>
+    <div class=package>
+        <h3> Signal Identification </h3>
+        <img class=left width=200 src="images/signalid.png">
+        <span class=description>
+            <a style='font-weight: bold' href="https://github.com/radio-astro-tools/signal-id">Signal Identification</a>:
+            A toolkit for signal identification and extraction from data cubes.
+        </span>
+    </div>
+    <div class=package>
+        <h3> Radio Telescope Beam </h3>
+        <img class=left width=200 src="images/ellipse.png">
+        <span class=description>
+            <a style='font-weight: bold' href="https://github.com/radio-astro-tools/radio_beam">Radio Beam</a>:
+            A small tool for manipulating radio beams, e.g. synthetic beams from interferometers
+            and primary beams from single-dishes, in the context of the <a href="http://astropy.readthedocs.org/en/latest/units/">astropy units</a> framework.
+        </span>
+    </div>
+    <div class=package>
+        <h3> CASA Python and CASA pip </h3>
+        <span class=description>
+            <a style='font-weight: bold' href="https://github.com/radio-astro-tools/casa-python">CASA Python</a>:
+            A wrapper script to allow you to use CASA's python interpreter with
+            other packages and independent from the CASA data reduction environment.
+        </span>
+    </div>
+    </section>
+
+    <section>
+    <h2> Astropy Learn tutorials </h2>
+    <div class=package>
+        <span class=description>
+            <a href="https://github.com/radio-astro-tools/radioscripts_contrib">Contributed Scripts</a>:
+            A depository for community-contributed scripts that are not necessarily vetted
+            or well-tested but may be useful to others
+        </span>
+    </div>
+    </section>
+
+
+    <section>
+    <h2>Contributing:</h2>
+
+    <div class=package>
+        If you'd like to <a href="contribute.html">contribute</a>, we welcome new
+        tutorials and recommendations for existing tutorials! Please open a
+        <a href="https://github.com/radio-astro-tools/tutorials/pulls">pull request</a>
+        There is also a
+        <a href="https://github.com/radio-astro-tools/sandbox">sandbox</a> that
+        you can put test code in that may be useful for others but is not fully polished.
+    </div>
+
+    <div>
+        <br> <hr> <br>
+    </div>
+
+    <div align=left><h2>About:</h2></div>
+    <div align=left>
+        These tutorials are developed by Adam Ginsburg, and Eric Koch with input from Tom Robitaille and Erik Rosolowsky.
+    </div>
+    <div align=left>
+        This project has been partially funded from the ALMA development program funded by the NSF.
+    </div>
+
+
+</div>
+
+
+<!--<a href="logos.htm"> Logo Gallery </a>-->
+
+
+</body>
+</html>
