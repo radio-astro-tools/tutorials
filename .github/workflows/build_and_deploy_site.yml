@@ -36,8 +36,8 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ${{ steps.folder.outputs.name }}
-          destination: ${{ steps.folder.outputs.name }}/_site
+          source: docs
+          destination: docs/_site
 
       - name: Setup Pages
         id: pages
@@ -46,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ${{ steps.folder.outputs.name }}
+          path: docs
 
   deploy:
     permissions:
