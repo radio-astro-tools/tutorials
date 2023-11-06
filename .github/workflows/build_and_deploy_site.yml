@@ -31,7 +31,6 @@ jobs:
       - name: Prepare public folder
         id: folder
         run: |
-          mkdir docs
           cp spectral_fitting/*.html docs
 
       - name: Build with Jekyll
