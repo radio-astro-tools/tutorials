@@ -28,7 +28,7 @@ jobs:
       - name: Export notebooks
         run: |
             JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert casa_to_spectralcube_guide/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert casa_to_spectralcube_guide/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
 
       - name: Prepare public folder
         id: folder
