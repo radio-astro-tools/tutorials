@@ -16,3 +16,4 @@ dask[complete]
 dask-image
 casatools
 casatasks
+casadata
