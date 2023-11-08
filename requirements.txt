@@ -6,7 +6,7 @@ notebook==6.5.2
 
 numpy
 scipy
-matplotlib
+matplotlib==2.2.3
 astropy
 aplpy
 git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
