@@ -33,7 +33,8 @@ jobs:
       - name: Prepare public folder
         id: folder
         run: |
-          cp spectral_fitting/*.html docs
+          cp **/*.html docs
+          cp *.html docs
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
