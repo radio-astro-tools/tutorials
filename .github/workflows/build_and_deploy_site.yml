@@ -35,12 +35,15 @@ jobs:
             JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert PVDiagramPlotting.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb.ipynb --execute --to html --ExecutePreprocessor.kerne]l_name=python
 
       - name: Prepare public folder
         id: folder
         run: |
-          cp **/*.html docs
+          cp spectral_fitting/*.html docs
+          cp casa_to_spectralcube_guide/*.html docs
+          cp masking_and_moments/*.html docs
+          cp parallel_spectral_fitting/*.html docs
           cp *.html docs
 
       - name: Build with Jekyll
