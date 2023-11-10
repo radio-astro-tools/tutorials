@@ -1,0 +1,78 @@
+name: Github Pages
+
+on:
+  push:
+    branches:
+      - master
+    # paths:
+    #    - 'spectral_fitting/*.ipynb'
+    #    - '*.json'
+    #    - '.github/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up python
+        id: setup-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Export notebooks
+        run: |
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert casa_to_spectralcube_guide/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert masking_and_moments/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DameCube.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert PVDiagramPlotting.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb.ipynb --execute --to html --ExecutePreprocessor.kerne]l_name=python
+
+      - name: Prepare public folder
+        id: folder
+        run: |
+          cp spectral_fitting/*.html docs
+          cp casa_to_spectralcube_guide/*.html docs
+          cp masking_and_moments/*.html docs
+          cp parallel_spectral_fitting/*.html docs
+          cp *.html docs
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: docs
+          destination: docs/_site
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: docs
+
+  deploy:
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

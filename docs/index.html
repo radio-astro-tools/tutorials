@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="Radio Tools. A Community for Radio Astronomy Software Development."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.sidr.light.css" />
+
+
+<title>Radio Astro Tools Tutorials</title>
+
+
+<script src="js/analytics.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+	<nav>
+		<div id="mobile-header">
+			<!-- Menu Icon -->
+		    <a id="responsive-menu-button" href="#sidr-main"><div><svg senable-background="new 0 0 24 24" height="24px" id="Layer_1" version="1.1" viewBox="0 0 24 24" width="24px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><g><g><path d="M23.244,17.009H0.75c-0.413,0-0.75,0.36-0.75,0.801v3.421C0,21.654,0.337,22,0.75,22h22.494c0.414,0,0.75-0.346,0.75-0.77    V17.81C23.994,17.369,23.658,17.009,23.244,17.009z M23.244,9.009H0.75C0.337,9.009,0,9.369,0,9.81v3.421    c0,0.424,0.337,0.769,0.75,0.769h22.494c0.414,0,0.75-0.345,0.75-0.769V9.81C23.994,9.369,23.658,9.009,23.244,9.009z     M23.244,1.009H0.75C0.337,1.009,0,1.369,0,1.81V5.23c0,0.423,0.337,0.769,0.75,0.769h22.494c0.414,0,0.75-0.346,0.75-0.769V1.81    C23.994,1.369,23.658,1.009,23.244,1.009z"/></g></g></svg></div></a>
+		    <!-- -->
+		</div>
+		<a href="index.html"><img width=32px src="images/radiosnakes_nostruts2.svg"/></a>
+		<div id="navigation">
+			<ul>
+				<li><a href="https://radio-astro-tools.github.io/about.html">About</a></li>
+                <!--<li><a href="help.html">Get Help</a></li>-->
+				<li><a href="https://radio-astro-tools.github.io/contribute.html">Contribute</a></li>
+                <li><a href="https://github.com/radio-astro-tools/">Organization Home</a>
+                <li><a href="https://radio-astro-tools.github.io/tutorials/">Tutorials</a>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+<div class=main>
+
+    <div id='header1withfig'>
+        <div id='radiosnakes96'>
+            <img alt="Snakes in Space" width='96px' style="vertical-align:middle;margin-right:10px;" src="images/radiosnakes_nostruts2.svg"/>
+        </div>
+        <div id='header1'>
+            Analysis Tutorials using <a href="https://radio-astro-tools.github.io/">radio-astro-tools</a>
+        </div>
+        <!--<div id='radiosnakes96'>
+            <img alt="Snakes on a Fourier Plane" width='96px' style="vertical-align:middle;margin-right:10px;" src="radiosnakes_fft.svg"/>
+        </div>-->
+    </div>
+
+
+    <!-- <object data="radiosnakes.svg" type="image/svg+xml"> </object> -->
+
+
+    <br>
+    <!-- <div class='description' align=left>
+        Tutorials using the radio-astro-tools packages.
+    </div> -->
+
+
+	<section class="featured">
+    <h1> radio-astro-tools Tutorials </h1>
+    These are a series of tutorials combining the radio-astro-tools packages with the larger astropy ecosystem for analyzing
+    spectral-line data cubes and radio/mm/sub-mm astronomical data.
+    <br>
+    <br>
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'>Fitting with spectral-cube</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="fitting_with_spectralcube.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/spectral_fitting/fitting_with_spectralcube.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=spectral_fitting%2Ffitting_with_spectralcube.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            Tutorial on fitting a Gaussian model to all sightlines in a spectral cube using spectral-cube and astropy.modelling.
+        </span>
+    </div>
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'>A guide to spectral-cube for CASA users</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="casa_to_spectralcube_guide.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/casa_to_spectralcube_guide/casa_to_spectralcube_guide.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=casa_to_spectralcube_guide%2Fcasa_to_spectralcube_guide.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            A how-to guide translating common spectral cube operations between spectral-cube and CASA.
+        </span>
+    </div>
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'>Signal-masking and calculating moment maps from spectral cubes</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="masking_and_moments_guide.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/masking_and_moments/masking_and_moments_guide.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=masking_and_moments%2Fmasking_and_moments_guide.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            Applying noise estimation techniques to create a signal mask for a spectral data cube. And use that mask to calculate various moment maps.
+        </span>
+    </div>
+
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'">Parallel fitting with dask</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="parallel_spectral_fitting.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/parallel_spectral_fitting/parallel_spectral_fitting.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=parallel_spectral_fitting%2Fparallel_spectral_fitting.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            How to use parallel processing to speed up spectral fitting with spectral-cube, astropy, and dask.
+        </span>
+    </div>
+
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'">Identification of the far 3 kpc arm in the Dame 2001 CO map</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="DameCube.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/DameCube.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=DameCube.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            Reproducing the discovery of the far 3 kpc arm from <a href="https://ui.adsabs.harvard.edu/abs/2008ApJ...683L.143D/abstract">Dame et al. (2008)</a> using spectral-cube and astropy.
+        </span>
+    </div>
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'">Creating and plotting Position-velocity (PV) diagrams</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="PVDiagramPlotting.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/PVDiagramPlotting.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=PVDiagramPlotting.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            Demonstrating how to make position-velocity (PV) diagrams with pvextractor along arbitrary-shaped paths.
+        </span>
+    </div>
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'">Position-velocity (PV) diagram of a protoplanetary disk</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="DiskPVExample.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/DiskPVExample.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=DiskPVExample.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            Examples of two methods to extract the position-velocity diagram of a protoplanetary disk using data from the <a href="https://alma-maps.info/">MAPS</a> ALMA large program.
+        </span>
+    </div>
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'">Reprojecting two cubes to a common resolution and projection</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="SpectralCubeReprojectExample.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/SpectralCubeReprojectExample.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=SpectralCubeReprojectExample.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            Demonstrating how to match two ALMA spectral-line data cubes onto a common, resolution, grid and projection.
+        </span>
+    </div>
+
+    <div class=package>
+        <span class=description>
+            <h2 style='font-weight: bold'">Applying a signal mask from one cube to another</h2>
+
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="SpectralCubeReprojectMaskExample_v4p1.html">Rendered Notebook</a>
+            <a style='font-weight: bold; display: inline-block; margin-left: 15px' href="https://github.com/radio-astro-tools/tutorials/blob/master/SpectralCubeReprojectMaskExample_v4p1.ipynb"><span class="label">Notebook on Github</span></a>
+            <a style='display: inline-block; margin-left: 15px' href="https://mybinder.org/v2/gh/radio-astro-tools/tutorials/HEAD?labpath=SpectralCubeReprojectMaskExample_v4p1.ipynb"><img src="https://mybinder.org/badge_logo.svg"></a>
+            <br>
+            <br>
+            <b>Author: <a href="https://github.com/abulatek">Alyssa Bulatek</a></b>
+            <br>
+            Matching two ALMA spectral-line data cubes onto a common, resolution, grid and projection, and how to use one
+            cube to produce a signal mask for the other. This is is helpful for situations where the velocity structure of
+            one cube is more complicated than the other, or one line is significantly brighter than the other and can help
+            recover structer from the fainter line.
+        </span>
+    </div>
+
+    </section>
+
+    <section>
+    <h2> Astropy Learn tutorials </h2>
+    <div class=package>
+        There are additional tutorials available in the <a href="https://learn.astropy.org/">Astropy Learn library</a>. Search for "spectral-cube"
+        under the astropy packages list. These tutorials include:
+
+        <br>
+        <br>
+
+        <span class=description>
+            <a href="https://learn.astropy.org/tutorials/PVDiagramPlotting.html">Plotting position-velocity (PV) diagrams</a>:
+            Similar to the version listed above.
+        </span>
+
+        <br>
+        <br>
+
+        <span class=description>
+            <a href="https://learn.astropy.org/tutorials/SpectralCubeReprojectExample.html">Reprojecting spectral cubes onto a mutual grid</a>:
+            How to match the spatial, and spectral resolution between two data cubes, and then reproject one onto the other.
+        </span>
+
+        <br>
+        <br>
+
+        <span class=description>
+            <a href="https://learn.astropy.org/tutorials/FITS-cubes.html">An overview of working FITS cubes</a>:
+            A tour of spectral-cube operations matching 21-cm HI and Herschel data of the Small Magellanic Cloud.
+            <br>
+            <b>Authored by <a href="http://www.astronomy.dk/">Dhanesh Krishnarao (DK)</a>, <a href="http://www.astro.wisc.edu/our-people/post-doctoral-students/shetty-shravan/">Shravan Shetty</a>,
+            <a href="http://www.astro.wisc.edu/our-people/graduate-students/gonzalez-casanova-diego/">Diego Gonzalez-Casanova</a>,
+            <a href="http://www.astro.wisc.edu/our-people/scientists/hernandez-audra/">Audra Hernandez</a>, Kris Stern, Kelle Cruz, Stephanie Douglas.</b>
+        </span>
+
+        <br>
+
+    </div>
+    </section>
+
+
+    <section>
+    <h2>Contributing:</h2>
+
+    <div class=package>
+        If you'd like to <a href="contribute.html">contribute</a>, we welcome new
+        tutorials and recommendations for existing tutorials! Please open a
+        <a href="https://github.com/radio-astro-tools/tutorials/pulls">pull request</a>
+    </div>
+
+    <br>
+
+    <span class=description>
+        <a href="https://github.com/radio-astro-tools/radioscripts_contrib">Contributed Scripts</a>:
+        A depository for community-contributed scripts that are not necessarily vetted
+        or well-tested but may be useful to others
+    </span>
+
+    <br>
+    <br>
+
+    <span class=description>
+        <a href="https://github.com/radio-astro-tools/sandbox">Sandbox</a>:
+        A repository for anything in progress and potentially useful for others or future prototyping.
+    </span>
+
+    <div>
+        <br> <hr> <br>
+    </div>
+
+    <div align=left><h2>About:</h2></div>
+    <div align=left>
+        These tutorials are developed by <a href="https://www.adamgginsburg.com/">Adam Ginsburg</a>,
+        <a href="https://e-koch.github.io/">Eric Koch</a>, and
+        <a href="https://github.com/abulatek">Alyssa Bulatek</a> with input from Tom Robitaille and Erik Rosolowsky.
+    </div>
+    <div align=left>
+        This project has been partially funded from the ALMA development program funded by the NSF.
+    </div>
+
+
+</div>
+
+
+<!--<a href="logos.htm"> Logo Gallery </a>-->
+
+
+</body>
+</html>

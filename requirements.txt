@@ -1,8 +1,16 @@
+# fetch
+requests
+beautifulsoup4
+
+notebook==6.5.2
+
 numpy
 scipy
-matplotlib
+matplotlib==3.7
 astropy
+regions
 aplpy
+astroquery
 git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
 git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
 git+https://github.com/radio-astro-tools/pvextractor/#egg=pvextractor
@@ -10,3 +18,4 @@ dask[complete]
 dask-image
 casatools
 casatasks
+casadata
