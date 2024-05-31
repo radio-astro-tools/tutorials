@@ -23,6 +23,8 @@ jobs:
 
       - name: Install requirements
         run: |
+          echo "datapath='${GITHUB_WORKSPACE}/.casa/'" > $GITHUB_WORKSPACE/config.py
+          export CASASITECONFIG=$GITHUB_WORKSPACE/config.py
           pip install casadata # force this first?
           pip install -r requirements.txt
 
