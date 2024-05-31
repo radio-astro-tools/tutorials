@@ -23,7 +23,11 @@ jobs:
           cache: 'pip'
 
       - name: Install requirements
-        run: pip install -r requirements.txt
+        run: |
+          echo "datapath='${GITHUB_WORKSPACE}/.casa/'" > $GITHUB_WORKSPACE/config.py
+          export CASASITECONFIG=$GITHUB_WORKSPACE/config.py
+          pip install casadata # force this first?
+          pip install -r requirements.txt
 
       - name: Export notebooks
         run: |
