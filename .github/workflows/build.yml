@@ -22,7 +22,9 @@ jobs:
           cache: 'pip'
 
       - name: Install requirements
-        run: pip install -r requirements.txt
+        run: |
+          pip install casadata # force this first?
+          pip install -r requirements.txt
 
       - name: Export notebooks
         run: |
