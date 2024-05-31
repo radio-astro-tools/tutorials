@@ -24,6 +24,7 @@ jobs:
 
       - name: Install requirements
         run: |
+          echo $GITHUB_WORKSPACE
           echo "datapath='${GITHUB_WORKSPACE}/.casa/'" > $GITHUB_WORKSPACE/config.py
           export CASASITECONFIG=$GITHUB_WORKSPACE/config.py
           pip install casadata # force this first?
