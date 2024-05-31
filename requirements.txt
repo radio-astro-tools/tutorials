@@ -16,6 +16,5 @@ git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
 git+https://github.com/radio-astro-tools/pvextractor/#egg=pvextractor
 dask[complete]
 dask-image
-casadata
 casatools
 casatasks
