@@ -39,8 +39,8 @@ jobs:
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DameCube.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert PVDiagramPlotting.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb.ipynb --execute --to html --ExecutePreprocessor.kerne]l_name=python
+            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb.ipynb --execute --to html --ExecutePreprocessor.kerne]l_name=python
 
       - name: Prepare public folder
         id: folder
