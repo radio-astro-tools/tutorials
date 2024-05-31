@@ -25,11 +25,9 @@ jobs:
 
       - name: Install requirements
         run: |
-          echo $GITHUB_WORKSPACE
           mkdir ${GITHUB_WORKSPACE}/.casa
           echo "datapath=['${GITHUB_WORKSPACE}/.casa/']; measurespath=datapath[0]; measures_auto_update=True; data_auto_update=True" > $GITHUB_WORKSPACE/config.py
           export CASASITECONFIG=$GITHUB_WORKSPACE/config.py
-          cat ${CASASITECONFIG}
           pip install -r requirements.txt
 
       - name: Export notebooks
