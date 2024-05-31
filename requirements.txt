@@ -10,7 +10,7 @@ matplotlib==3.7
 astropy
 regions
 aplpy
-astroquery
+astroquery --pre
 git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
 git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
 git+https://github.com/radio-astro-tools/pvextractor/#egg=pvextractor
