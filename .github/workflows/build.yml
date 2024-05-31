@@ -1,4 +1,4 @@
-name: Github Pages
+name: Pull Request basic build checks
 
 on:
   issues:
@@ -24,7 +24,8 @@ jobs:
 
       - name: Install requirements
         run: |
-          echo "datapath='${GITHUB_WORKSPACE}/.casa/'" > $GITHUB_WORKSPACE/config.py
+          echo $GITHUB_WORKSPACE
+          echo "datapath='${GITHUB_WORKSPACE}/.casa/'; measures_path=datapath; measures_auto_update=True; data_auto_update=True" > $GITHUB_WORKSPACE/config.py
           export CASASITECONFIG=$GITHUB_WORKSPACE/config.py
           pip install casadata # force this first?
           pip install -r requirements.txt
