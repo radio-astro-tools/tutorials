@@ -28,6 +28,7 @@ jobs:
           echo "datapath=['${GITHUB_WORKSPACE}/.casa/']; measurespath=datapath[0]; measures_auto_update=True; data_auto_update=True" > $GITHUB_WORKSPACE/config.py
           export CASASITECONFIG=$GITHUB_WORKSPACE/config.py
           pip install -r requirements.txt
+          pip install -U --pre astroquery # required to be separate; requirements.txt does not respect --pre
 
       - name: Export notebooks
         run: |
@@ -38,8 +39,8 @@ jobs:
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DameCube.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert PVDiagramPlotting.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            # JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb.ipynb --execute --to html --ExecutePreprocessor.kerne]l_name=python
+            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
 
       - name: Prepare public folder
         id: folder
