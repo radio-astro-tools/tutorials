@@ -29,6 +29,7 @@ jobs:
           echo "datapath=['${GITHUB_WORKSPACE}/.casa/']; measurespath=datapath[0]; measures_auto_update=True; data_auto_update=True" > $GITHUB_WORKSPACE/config.py
           export CASASITECONFIG=$GITHUB_WORKSPACE/config.py
           pip install -r requirements.txt
+          pip install -U --pre astroquery # required to be separate; requirements.txt does not respect --pre
 
       - name: Export notebooks
         run: |
