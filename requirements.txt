@@ -5,7 +5,8 @@ beautifulsoup4
 notebook
 
 numpy>=1.24
-scipy>=1.8.1matplotlib>=3.5.2
+scipy>=1.8.1
+matplotlib>=3.5.2
 astropy>=6.1
 regions
 astroquery --pre
