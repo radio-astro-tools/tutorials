@@ -4,10 +4,9 @@ beautifulsoup4
 
 notebook
 
-numpy
-scipy
-matplotlib
-astropy
+numpy>=1.24
+scipy>=1.8.1matplotlib>=3.5.2
+astropy>=6.1
 regions
 astroquery --pre
 git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
@@ -18,3 +17,5 @@ dask-image
 casatools
 casatasks
 casadata
+aplpy>=2.1
+joblib>=1.1
