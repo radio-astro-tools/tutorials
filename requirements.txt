@@ -2,11 +2,11 @@
 requests
 beautifulsoup4
 
-notebook==6.5.2
+notebook
 
 numpy
 scipy
-matplotlib==3.7
+matplotlib
 astropy
 regions
 astroquery --pre
