@@ -15,5 +15,4 @@ git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
 git+https://github.com/radio-astro-tools/pvextractor/#egg=pvextractor
 dask[complete]
 dask-image
-aplpy>=2.1
 joblib>=1.1
