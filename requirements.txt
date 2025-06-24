@@ -16,3 +16,4 @@ git+https://github.com/radio-astro-tools/pvextractor/#egg=pvextractor
 dask[complete]
 dask-image
 joblib>=1.1
+seaborn
