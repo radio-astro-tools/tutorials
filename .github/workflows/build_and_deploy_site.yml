@@ -3,11 +3,11 @@ name: Github Pages
 on:
   push:
     branches:
-      - master
-    # paths:
-    #    - 'spectral_fitting/*.ipynb'
-    #    - '*.json'
-    #    - '.github/**'
+    - main
+    - 'v*'
+    tags:
+    - '*'
+  pull_request:
 
 jobs:
   build:
@@ -79,6 +79,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    if: contains(fromJSON('["refs/tags/v", "refs/heads/master"]'), github.event.ref)
     runs-on: ubuntu-latest
     needs: build
     steps:
