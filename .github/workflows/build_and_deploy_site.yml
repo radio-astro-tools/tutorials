@@ -22,6 +22,9 @@ jobs:
           python-version: '3.10'
           cache: 'pip'
 
+      - name: Pre-install numpy
+        run: |
+          pip install --upgrade numpy
       - name: Install requirements
         run: |
           mkdir ${GITHUB_WORKSPACE}/.casa
@@ -34,12 +37,12 @@ jobs:
         run: |
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert fitting_with_spectralcube/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert masking_and_moments/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DameCube.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert PVDiagramPlotting.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
 
           # CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert casa_to_spectralcube_guide/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
 
