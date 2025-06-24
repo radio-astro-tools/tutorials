@@ -22,10 +22,6 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
-
-      - name: Pre-install numpy
-        run: |
-          pip install --upgrade numpy
       - name: Install requirements
         run: |
           mkdir ${GITHUB_WORKSPACE}/.casa
