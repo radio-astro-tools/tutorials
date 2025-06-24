@@ -1,9 +1,9 @@
-name: Github Pages
+name: Build notebooks and deploy to Github Pages
 
 on:
   push:
     branches:
-    - main
+    - master
     - 'v*'
     tags:
     - '*'
