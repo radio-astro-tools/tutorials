@@ -46,7 +46,11 @@ jobs:
       - name: Prepare public folder
         id: folder
         run: |
-          cp **/*.html docs
+          cp spectral_fitting/*.html docs
+          cp casa_to_spectralcube_guide/*.html docs
+          cp masking_and_moments/*.html docs
+          cp *.html docs
+        # cp parallel_spectral_fitting/*.html docs
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
