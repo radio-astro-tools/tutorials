@@ -46,7 +46,7 @@ jobs:
       - name: Prepare public folder
         id: folder
         run: |
-          cp spectral_fitting/*.html docs
+          cp fitting_with_spectralcube/*.html docs
           cp casa_to_spectralcube_guide/*.html docs
           cp masking_and_moments/*.html docs
           cp *.html docs
