@@ -1,14 +1,14 @@
-name: Pull Request basic build checks
+name: Build notebooks and deploy to Github Pages
 
 on:
   push:
     branches:
-    - main
+    - master
     - 'v*'
     tags:
     - '*'
   pull_request:
-
+  workflow_dispatch:
 
 jobs:
   build:
@@ -20,10 +20,33 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: |
+            3.13
           cache: 'pip'
-
       - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+          pip install -U --pre astroquery # required to be separate; requirements.txt does not respect --pre
+
+      - name: Export notebooks
+        run: |
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert fitting_with_spectralcube/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert masking_and_moments/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DameCube.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert PVDiagramPlotting.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+            JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+
+      - name: Set up python (CASA)
+        id: setup-python-casa
+        uses: actions/setup-python@v5
+        with:
+          python-version: |
+            3.10
+          cache: 'pip'
+      - name: Install requirements (CASA)
         run: |
           mkdir ${GITHUB_WORKSPACE}/.casa
           echo "datapath=['${GITHUB_WORKSPACE}/.casa/']; measurespath=datapath[0]; measures_auto_update=True; data_auto_update=True" > $GITHUB_WORKSPACE/config.py
@@ -31,26 +54,18 @@ jobs:
           pip install -r requirements.txt
           pip install -U --pre astroquery # required to be separate; requirements.txt does not respect --pre
 
-      - name: Export notebooks
+      - name: Export notebooks (CASA)
         run: |
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert casa_to_spectralcube_guide/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert masking_and_moments/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DameCube.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert PVDiagramPlotting.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-            CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
 
       - name: Prepare public folder
         id: folder
         run: |
-          cp spectral_fitting/*.html docs
+          cp fitting_with_spectralcube/*.html docs
           cp casa_to_spectralcube_guide/*.html docs
           cp masking_and_moments/*.html docs
-          cp parallel_spectral_fitting/*.html docs
           cp *.html docs
+          cp parallel_spectral_fitting/*.html docs
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -66,3 +81,20 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
+
+  deploy:
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    if: contains(fromJSON('["refs/tags/v", "refs/heads/master"]'), github.event.ref)
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

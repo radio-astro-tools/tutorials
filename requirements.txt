@@ -2,19 +2,18 @@
 requests
 beautifulsoup4
 
-notebook==6.5.2
+notebook
 
-numpy
-scipy
-matplotlib==3.7
-astropy
+numpy>=1.24
+scipy>=1.8.1
+matplotlib>=3.5.2
+astropy>=6.1
 regions
-aplpy
 astroquery --pre
 git+https://github.com/radio-astro-tools/spectral-cube/#egg=spectral-cube
 git+https://github.com/radio-astro-tools/radio-beam/#egg=radio-beam
 git+https://github.com/radio-astro-tools/pvextractor/#egg=pvextractor
 dask[complete]
 dask-image
-casatools
-casatasks
+joblib>=1.1
+seaborn
