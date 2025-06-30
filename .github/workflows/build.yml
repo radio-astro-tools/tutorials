@@ -40,7 +40,7 @@ jobs:
             JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
 
       - name: Set up python (CASA)
-        id: setup-python
+        id: setup-python-casa
         uses: actions/setup-python@v5
         with:
           python-version: |
