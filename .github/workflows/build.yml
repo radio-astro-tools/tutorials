@@ -40,8 +40,7 @@ jobs:
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert DiskPVExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectExample.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
             CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert SpectralCubeReprojectMaskExample_v4p1.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
-
-          # CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
+          CASASITECONFIG=$GITHUB_WORKSPACE/config.py JUPYTER_CONFIG_DIR=./.jupyter jupyter nbconvert parallel_spectral_fitting/*.ipynb --execute --to html --ExecutePreprocessor.kernel_name=python
 
       - name: Prepare public folder
         id: folder
@@ -50,7 +49,7 @@ jobs:
           cp casa_to_spectralcube_guide/*.html docs
           cp masking_and_moments/*.html docs
           cp *.html docs
-        # cp parallel_spectral_fitting/*.html docs
+        cp parallel_spectral_fitting/*.html docs
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
