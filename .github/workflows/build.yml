@@ -67,6 +67,9 @@ jobs:
           cp *.html docs
           cp parallel_spectral_fitting/*.html docs
 
+      - name: Insert shared site header into rendered notebooks
+        run: python insert_header.py
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
