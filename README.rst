@@ -10,6 +10,8 @@ Visit the `tutorial page <https://radio-astro-tools.github.io/tutorials/>`_
 to access the rendered notebooks and helpful links for interactive
 using with `Binder <https://mybinder.org/>`_.
 
+See `CHANGELOG.md <CHANGELOG.md>`_ for notable changes, tracked by date.
+
 Development
 -----------
 
