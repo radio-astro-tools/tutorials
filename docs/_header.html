@@ -1,7 +1,10 @@
 <style>
   /* Clear the absolutely positioned radio-astro-tools nav bar (42px tall) above the
-     page content, plus a small gap so content doesn't sit flush against it. */
-  body { padding-top: 60px; }
+     page content, plus a small gap so content doesn't sit flush against it.
+     nbconvert's lab template renders <body class="jp-Notebook">, and its
+     `.jp-Notebook { padding: var(--jp-notebook-padding); }` rule outranks a bare
+     `body` selector, so the class has to be matched as well. */
+  body, body.jp-Notebook { padding-top: 60px; }
 </style>
 <div id="wrapper">
 	<nav>
