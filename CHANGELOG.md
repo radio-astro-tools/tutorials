@@ -10,6 +10,8 @@ corresponding commit with the same date when a section is finalized.
 
 ## [Unreleased]
 
+## [2026.09.10] - 2026-09-10
+
 ### Added
 - Site header on rendered notebook pages and an issue-tracker link (#51).
 - `nbstripout` pre-commit hook + CI check to keep notebooks output-free on `master` (#52).
