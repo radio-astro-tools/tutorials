@@ -17,6 +17,7 @@ corresponding commit with the same date when a section is finalized.
 
 ### Fixed
 - `simple_norm` call updated to use `vmin`/`vmax` (#50).
+- Injected nav bar no longer overlaps the top of rendered notebook pages; the padding from #53 was being overridden by nbconvert's `.jp-Notebook` styles (#56).
 
 <!--
 Add new entries above this line, under Unreleased, grouped as:
